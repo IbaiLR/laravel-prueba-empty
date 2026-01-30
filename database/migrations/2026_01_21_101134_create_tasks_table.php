@@ -18,7 +18,6 @@ return new class extends Migration
             $table->text('description'); // varchar(255) en el examen [cite: 75]
             $table->boolean('is_completed')->default(false);
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
